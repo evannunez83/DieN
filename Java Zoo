@@ -1,0 +1,30 @@
+public class NunezEvan extends Animal
+{
+	private String color;
+	private int legs;
+	private string NunezEvan;
+	
+	public NunezEvan()
+	{
+		super("Nunez Evan", "White, Black, and Gray", 4)
+	}
+	
+	public String getType()
+	{
+		return "Mini Aussie";
+	}
+	
+	public String getName()
+	{
+		return "Skye";
+	}
+	
+	public String getDisposition()
+	{
+		return "Playing tug, going on walks, and eating lots of food and treats";
+	}
+	
+	public String speak()
+	{
+		return "Bark Bark"
+	}
