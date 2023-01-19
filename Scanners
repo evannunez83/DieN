@@ -1,0 +1,48 @@
+public class ScannerRoadCSVFile
+{
+	public void run() throws FileNotFoundException {
+		Filw dataFile = new File("TestScoresByClass.csv");
+		Scanner scanner = new Scanner(dataFile);
+		scanner.useDelimiter("\n");
+		System.out.println("Class: Avg score");
+		while (scanner.hasNext()) {
+  
+			String line = scanner.nextLine();
+  
+			if (!line.startsWith ("Class")) {
+				int sectoin = 0;
+				int sum = 0;
+				int avg = 0;
+				int idx = 0;
+    
+				Scanner rowScanner = new Scanner(line);
+				rowScanner.useDelimiter(",");
+				while (rowScanner.hasNext()) {
+					if (idx == 0) {
+						section = rowScanner.nextInt(); 
+					} else {
+						sum = sum + rowScanner.nextInt();
+					}
+					idx++;
+				}
+	
+				avg = sum/10;
+	
+				System.out.println(section + ": " + avg);
+
+			}
+		}
+	}
+
+	public static void main (String[] args) {
+		try {
+			ScannerReadCSVFile srCsv = new ScannerReadCSVFile();
+			spCsv.run();
+		} catch (FileNotFoundException e) {
+			System.out.println("File Not Found");
+		} catch (Exception e) {
+			System.out.println("There's an error someplace. Try using the debugger to find it!");
+
+		}
+	}
+}
