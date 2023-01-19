@@ -1,0 +1,23 @@
+public class DieN {
+
+	private int value;
+	private int numberOfSides;
+
+	public DieN(int sides) {
+		this.numberOfSides = sides;
+		this.roll();
+		}
+		
+	public int getValue() {
+		return value;
+		}
+		
+	public void roll() {
+		this.value = (int)(Math.random() * numberOfSides) + 1;
+		}
+	public into rollAndGetValue() {
+		roll():
+		return getValue();
+		}	
+}
+
