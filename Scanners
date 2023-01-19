@@ -1,3 +1,5 @@
+// avg row of the ten test scores
+
 public class ScannerRoadCSVFile
 {
 	public void run() throws FileNotFoundException {
@@ -10,9 +12,10 @@ public class ScannerRoadCSVFile
 			String line = scanner.nextLine();
   
 			if (!line.startsWith ("Class")) {
-				int sectoin = 0;
+				int section = 0;
 				int sum = 0;
 				int avg = 0;
+				// sorts nuumbers into a index so the code can read it easier
 				int idx = 0;
     
 				Scanner rowScanner = new Scanner(line);
