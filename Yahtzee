@@ -1,10 +1,12 @@
 public classYatzee() {
+// makes the variables
     Die6 dice1;
 	Die6 dice2;
 	Die6 dice3;
 	Die6 dice4;
 	Die6 dice5;
 	
+	//creates the dice to an object
 	public Yahtzee() {
 		dice1 = new Die6();
 		dice2 = new Die6();
@@ -14,6 +16,7 @@ public classYatzee() {
 	}
 	
 	public String toString() {
+		// gets the value of each individual die
 		ArrayList<Integer> intList = new ArrayList<Integer>();
 		intList.add(dice1.getValue());
 		intList.add(dice2.getValue());
@@ -27,6 +30,7 @@ public classYatzee() {
 	}
 	
 	public void roll() {
+		// rolls the die
 		dice1.roll();
 		dice2.roll();
 		dice3.roll();
@@ -36,12 +40,14 @@ public classYatzee() {
 	
 	public String summarize() {
 		List<Integer> intList = new ArrayList<Integer>();
+		// gets the new value of the die after rolled
 		intList.add(dice1.getValue());
 		intList.add(dice2.getValue());
 		intList.add(dice3.getValue());
 		intList.add(dice4.getValue());
 		intList.add(dice5.getValue());
 		
+		// gets how mant times a number has rolled
 		int occur1 = COllections.frequency(intList, 1);
 		int occur2 = COllections.frequency(intList, 2);
 		int occur3 = COllections.frequency(intList, 3);
@@ -53,6 +59,7 @@ public classYatzee() {
 	}
 	
 	public void roll(int dieNumber) {
+		// rolls each invidivual die
 		if (dieNumber == 1) {
 			dice1.roll();
 		}
