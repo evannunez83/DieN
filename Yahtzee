@@ -1,0 +1,72 @@
+public classYatzee() {
+    Die6 dice1;
+	Die6 dice2;
+	Die6 dice3;
+	Die6 dice4;
+	Die6 dice5;
+	
+	public Yahtzee() {
+		dice1 = new Die6();
+		dice2 = new Die6();
+		dice3 = new Die6();
+		dice4 = new Die6();
+		dice5 = new Die6();
+	}
+	
+	public String toString() {
+		ArrayList<Integer> intList = new ArrayList<Integer>();
+		intList.add(dice1.getValue());
+		intList.add(dice2.getValue());
+		intList.add(dice3.getValue());
+		intList.add(dice4.getValue());
+		intList.add(dice5.getValue());
+		
+		String listString = intList.toString();
+		
+		return "Dice Values " + list string;
+	}
+	
+	public void roll() {
+		dice1.roll();
+		dice2.roll();
+		dice3.roll();
+		dice4.roll();
+		dice5.roll();
+	}
+	
+	public String summarize() {
+		List<Integer> intList = new ArrayList<Integer>();
+		intList.add(dice1.getValue());
+		intList.add(dice2.getValue());
+		intList.add(dice3.getValue());
+		intList.add(dice4.getValue());
+		intList.add(dice5.getValue());
+		
+		int occur1 = COllections.frequency(intList, 1);
+		int occur2 = COllections.frequency(intList, 2);
+		int occur3 = COllections.frequency(intList, 3);
+		int occur4 = COllections.frequency(intList, 4);
+		int occur5 = COllections.frequency(intList, 5);
+		int occur6 = COllections.frequency(intList, 6);
+		
+		return "1-" + occur1 + ";" + "2-" + occur2 + ";" + "3-" + occur3 + ";" + "4-" + occur4 + ";" + "5-" + occur5 + ";" + "6-" + occur6;
+	}
+	
+	public void roll(int dieNumber) {
+		if (dieNumber == 1) {
+			dice1.roll();
+		}
+		if (dieNumber == 2) {
+			dice2.roll();
+		}
+		if (dieNumber == 3) {
+			dice3.roll();
+		}
+		if (dieNumber == 4) {
+			dice4.roll();
+		}
+		if (dieNumber == 5) {
+			dice5.roll();
+		}
+	)
+)
